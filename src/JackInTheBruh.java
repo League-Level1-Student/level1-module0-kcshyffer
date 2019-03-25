@@ -68,7 +68,7 @@ private void playSound(String soundFile) {
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
 	counter++;
-	if (counter > 5) {
+	if (counter == 5) {
 	showPicture("jackInTheBox.png");
 	}
 }}
