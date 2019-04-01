@@ -12,13 +12,14 @@ public static void main(String[] args) {
 	SoundEffectsMachine SFX = new SoundEffectsMachine();
 	SFX.showButton();
 }
+JButton bruhButton = new JButton();
+JButton bruhButton2 = new JButton();
+
 public void showButton() {
 	JFrame bruhFrame = new JFrame();
     bruhFrame.setVisible(true);
     JPanel bruhPanel = new JPanel();
     bruhFrame.add(bruhPanel);
-    JButton bruhButton = new JButton();
-    JButton bruhButton2 = new JButton();
     bruhFrame.add(bruhPanel);
     bruhPanel.add(bruhButton);
     bruhPanel.add(bruhButton2);
@@ -36,7 +37,11 @@ private void playSound(String fileName) {
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
-	
+	if(e.getSource() == bruhButton) {
+			playSound("homer-woohoo.wav");}
+	else {
+		playSound("sawing-wood-daniel_simon.wav");
+	}
 	
 }
 }
