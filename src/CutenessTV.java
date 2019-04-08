@@ -9,12 +9,17 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class CutenessTV implements ActionListener {
-
+	public static void main(String[] args) {
+		CutenessTV TV = new CutenessTV();
+		TV.showButton();
+	}
 	
 	JButton bruhButton = new JButton();
 	JButton bruhButton2 = new JButton();
 	JButton bruhButton3 = new JButton();
 
+	
+	
 	public void showButton() {
 		JFrame bruhFrame = new JFrame();
 	    bruhFrame.setVisible(true);
@@ -57,7 +62,7 @@ public class CutenessTV implements ActionListener {
 		if(e.getSource() == bruhButton) {
 			showFrog();
 		}
-		if(e.getSource() == bruhButton2) {
+		else if(e.getSource() == bruhButton2) {
 			showFluffyUnicorns();
 		}
 		else {
