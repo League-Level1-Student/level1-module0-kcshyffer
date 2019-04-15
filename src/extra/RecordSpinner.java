@@ -1,19 +1,25 @@
 PImage pictureOfRecord;     //as member variable
 
+int angle = 0;
+
 void setup(){
  
-size(600,600);     //in setup method  
+size(1920,1080);     //in setup method  
 pictureOfRecord = loadImage("vinyl-record.png");     //in setup method  
 
-pictureOfRecord.resize(650,500);     //in setup method
-    }
+pictureOfRecord.resize(600, 600);     //in setup method
+
+song = loadSound  
+}
   
 void draw(){
-  image(pictureOfRecord, -25, 50);     //in draw method
-  rotateImage(pictureOfRecord, 100);
-  
-  
-    }
+  if(mousePressed){
+  rotateImage(pictureOfRecord, angle);
+  image(pictureOfRecord, 0, 0);
+  angle += 2;}
+  song.play();
+  song.pause();
+  }
     
 void rotateImage(PImage image, int amountToRotate) {
      translate(width/2, height/2);
